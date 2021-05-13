@@ -12,8 +12,7 @@ import {
 
 export default function LoginForm() {
     return (
-        <Center>
-        <Flex width="full" align="center" justifyContent="center">
+        <Flex align="center" justifyContent="center">
             <Box p={8} maxWidth="500px" borderWidth={1} borderRadius={8} boxShadow="lg">
                 <Box textAlign="center">
                     <Heading>Login</Heading>
@@ -28,13 +27,10 @@ export default function LoginForm() {
                             <FormLabel>Password</FormLabel>
                             <Input type="password" placeholder="*******" />
                         </FormControl>
-                        <Button width="full" mt={4} type="submit">
-                            Sign In
-              </Button>
+                        <Button colorScheme="primary" width="full" mt={4} type="submit">Sign In</Button>
                     </form>
                 </Box>
             </Box>
         </Flex>
-        </Center>
     );
 }
