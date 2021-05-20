@@ -18,10 +18,10 @@ import {
 import NextLink from "next/link"
 import Logo from "/components/logo"
 
-const Links = ['Juegos', 'Estadisticas', 'Equipo', 'Login'];
+const Links = [{ title: 'Juegos', path: 'games' }, { title: 'Estadisticas', path: 'scoreboard' }, { title: 'Equipo', path: 'team' }, { title: 'Login', path: 'login' }];
 
-const NavLink = ({ children }) => (
-    <NextLink href={`/${children.toLowerCase()}`}> 
+const NavLink = ({ path, children }) => (
+    <NextLink href={`/${path.toLowerCase()}`}>
         <Link
             px={2}
             py={1}
@@ -30,7 +30,7 @@ const NavLink = ({ children }) => (
                 textDecoration: 'none',
                 bg: useColorModeValue('gray.200', 'gray.700'),
             }}
-            >
+        >
             {children}
         </Link>
     </NextLink>
@@ -49,7 +49,7 @@ export default function Simple() {
                             as={'nav'}
                             spacing={4}>
                             {Links.map((link) => (
-                                <NavLink key={link}>{link}</NavLink>
+                                <NavLink key={link.path} path={link.path}>{link.title}</NavLink>
                             ))}
                         </HStack>
                     </HStack>
