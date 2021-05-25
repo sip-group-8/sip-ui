@@ -18,7 +18,7 @@ import {
 import NextLink from "next/link"
 import Logo from "/components/logo"
 
-const Links = [{ title: 'Juegos', path: 'games' }, { title: 'Estadisticas', path: 'scoreboard' }, { title: 'Equipo', path: 'team' }, { title: 'Login', path: 'login' }];
+const Links = [{ title: 'Juegos', path: 'games' }, { title: 'Estadisticas', path: 'scoreboard' }, { title: 'Equipo', path: 'team' }, { title: 'Login', path: 'login' }, { title: 'Canje', path: 'prizes' }];
 
 const NavLink = ({ path, children }) => (
     <NextLink href={`/${path.toLowerCase()}`}>
