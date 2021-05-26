@@ -11,17 +11,13 @@ import {
     useColorModeValue,
     Spacer
 } from '@chakra-ui/react';
-import {
-    IoAnalyticsSharp,
-    IoLogoBitcoin,
-    IoSearchSharp,
-} from 'react-icons/io5';
+
 import { ReactElement } from 'react';
 
 
 
 
-export default function SplitWithImage() {
+export default function PrizeHero() {
     return (
         <Container maxW={'5xl'} py={12}>
             <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
