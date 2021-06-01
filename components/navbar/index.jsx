@@ -55,6 +55,7 @@ export default function Simple() {
                     </HStack>
                     <Flex alignItems={'center'}>
                         <Menu>
+                        2000 puntos
                             <MenuButton
                                 as={Button}
                                 rounded={'full'}
@@ -68,6 +69,7 @@ export default function Simple() {
                                 />
                                 
                             </MenuButton>
+                            
                             <MenuList>
                                 <MenuItem>Link 1</MenuItem>
                                 <MenuItem>Link 2</MenuItem>

@@ -12,7 +12,7 @@ import {
   Tooltip
 } from '@chakra-ui/react';
 import { BsStar, BsStarFill, BsStarHalf } from 'react-icons/bs';
-import { FiGift} from 'react-icons/fi';
+import { FiGift } from 'react-icons/fi';
 import { BasicUsageModal } from '../../components/prizeModal/index.jsx'
 
 
@@ -32,7 +32,6 @@ export default function PrizeItem({ picture, price, title, exchangeUrl }) {
         roundedTop="lg"
       />
 
-      
       <Box p="6">
         <Flex mt="1" justifyContent="space-between" alignContent="center">
           <Box
