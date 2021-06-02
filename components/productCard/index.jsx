@@ -14,7 +14,7 @@ import {
 const IMAGE =
     'https://images.unsplash.com/photo-1585338107529-13afc5f02586?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80';
 
-export default function ProductCard({ picture = IMAGE, playedTimes, title, playUrl}) {
+export default function ProductCard({ picture, playedTimes, title, playUrl}) {
     return (
         <Center py={12}>
             <Box
@@ -55,16 +55,16 @@ export default function ProductCard({ picture = IMAGE, playedTimes, title, playU
                         height={230}
                         width={282}
                         objectFit={'cover'}
-                        src={IMAGE}
+                        src={picture}
                     />
                 </Box>
                 <Stack pt={10} align={'center'}>
                     <Text color={'gray.500'} fontSize={'sm'} textTransform={'uppercase'}>
                         {playedTimes}
-            </Text>
-                    <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={500}>
-                        {title}
-            </Heading>
+                    </Text>
+                    <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={500} color={"black"}>
+                       <strong>{title}</strong> 
+                    </Heading>
                     <Stack direction={'row'} align={'center'}>
                         <Text fontWeight={800} fontSize={'xl'}>
                             <Link href={playUrl}>
