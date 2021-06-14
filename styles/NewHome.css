@@ -257,6 +257,15 @@
     display: none;
 }
 
+.btnMje{
+    background: rgb(38, 19, 107);
+    display: inline-block;
+    /* margin-top: 7%; */
+    padding: 15px 30px;
+    border-radius: 50px;
+    color: #fff;
+    text-align: center; 
+}
 
 
 

@@ -19,6 +19,7 @@ import {
   import { Button, ButtonGroup, Lorem } from "@chakra-ui/react"    
   import { Input } from "@chakra-ui/react"
   import { Stack } from "@chakra-ui/react"
+  import { Textarea } from "@chakra-ui/react"
 
 export default function NewHome() {
 
@@ -95,20 +96,22 @@ export default function NewHome() {
             <div className="f-container2 pad" >
               <div className="f__inner2">
                   <div className="block">
-                    <a href="" >
                       <div className="card">       
                           <img className="card-img-top" src="https://i.ytimg.com/vi/sigge8kJ9wg/mqdefault.jpg" alt="Santander te invita a abrir una cuenta gratis y 100% online"/>       
                           <div className="card-body">                
                                 <div className="news-title"> 
                                     <h4>Hoy es el cumpleaños de Pablo Quiroz</h4>              
-                                    <h1 className="">¡Saludalo!</h1> 
+                                      <CustomModal2
+                                      showModalButtonText="¡Saludalo!"
+                                      modalHeader="Mensaje"
+                                      modalBody="Escriba el cuerpo del mensaje"
+                                    />
                                 </div>           
                                 <p className="card-text "> 
                                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem fugit ex maiores officia quidem cumque distinctio nulla, temporibus ratione enim cupiditate impedit, facilis debitis voluptatum, blanditiis perspiciatis modi dolorem atque.
                                 </p>                             
                             </div>
                         </div> 
-                        </a>
                     </div>
                   
                     <div className="block">
@@ -161,7 +164,7 @@ export default function NewHome() {
             <ModalCloseButton />
             <ModalBody>
                 <Stack spacing={4}>
-                  <Input placeholder="Ingrese el el mensaje.." size="lg" />
+                  <Textarea placeholder="Ingrese el el mensaje.." />
                   
                   <div id="idalert" className="hide">
                     <Alert status="success">
@@ -191,5 +194,52 @@ export default function NewHome() {
       </>
     );
   };
+
+
+  const CustomModal2 = ({ showModalButtonText, modalHeader, modalBody }) => {
+    const { isOpen, onOpen, onClose } = useDisclosure();
+    return (
+      <>
+        <Button className="btnMje " size={1} onClick={onOpen}>
+          {showModalButtonText}
+        </Button>
+        <Modal isOpen={isOpen}  onClose={onClose}>
+          <ModalOverlay />
+          <ModalContent>
+            <ModalHeader>{modalHeader}</ModalHeader>
+            <ModalCloseButton />
+            <ModalBody>
+                <Stack spacing={4}>
+                  {/* <Input placeholder="" size="lg" /> */}
+                  <Textarea placeholder="Ingrese el el mensaje.." />
+                  <div id="idalert" className="hide">
+                    <Alert status="success">
+                    <AlertIcon />
+                      ¡Mensaje enviado
+                    </Alert> 
+                  </div>
+                </Stack>
+            </ModalBody>
+  
+            <ModalFooter>
+              <Button variant="ghost" mr={3} onClick={onClose}>
+                Cancelar
+              </Button>
+              <Button
+                colorScheme="red"
+                onClick={() => {
+                  var element = document.getElementById("idalert");
+                  element.classList.remove("hide");
+                }}
+              >
+                Enviar
+              </Button>
+            </ModalFooter>
+          </ModalContent>
+        </Modal>
+      </>
+    );
+  };
+
 
   
