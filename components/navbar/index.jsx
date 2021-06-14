@@ -26,6 +26,7 @@ const Links = [
   //   { title: "Equipo", path: "team" },
   { title: "Canje", path: "prizes" },
   { title: "Login", path: "login" },
+  { title: "Home", path: "home" },
 ];
 
 const NavLink = ({ path, children }) => (
