@@ -257,6 +257,8 @@
     display: none;
 }
 
+
+
 .btnMje{
     background: rgb(38, 19, 107);
     display: inline-block;
@@ -267,12 +269,22 @@
     text-align: center; 
 }
 
+.imgbox{
+    height: 250px;
+    width: 100%;
+    min-width: 380px;
+}
 
 
 
+.cont{
+    margin: 15px;
+    padding: 10px;
+}
 
-
-
+.mrg {
+    margin: 25px;
+}
 
 
 

@@ -20,22 +20,23 @@ import {
   import { Input } from "@chakra-ui/react"
   import { Stack } from "@chakra-ui/react"
   import { Textarea } from "@chakra-ui/react"
+  import { EmailIcon } from '@chakra-ui/icons'
 
 export default function NewHome() {
 
 
     return (
       
-        <div className="">
+        <div className="cont">
           {/* banner de arriba  */}
           <div className="f-container">
             <div className="f__inner">
               <div className="banner1" ><h2 className="logo">NUESTRA EMPRESA</h2></div>
               <div></div>
               <div></div>
-              <div className="banner"><a href="#">Landing</a></div>
+              {/* <div className="banner"><a href="#">Landing</a></div>
               <div className="banner"><a href="#">Beneficios</a></div>
-              <div className="banner"><a href="#">Busquedas</a></div>
+              <div className="banner"><a href="#">Busquedas</a></div> */}
             </div>
           </div> 
           {/* Primer Div con el carrousel y el Texto de RRHH */}
@@ -154,8 +155,8 @@ export default function NewHome() {
     const { isOpen, onOpen, onClose } = useDisclosure();
     return (
       <>
-        <Button colorScheme="red" size={1} onClick={onOpen}>
-          {showModalButtonText}
+        <Button leftIcon={<EmailIcon/>} colorScheme="red" variant="solid" size={1} onClick={onOpen}>
+           {showModalButtonText}
         </Button>
         <Modal isOpen={isOpen}  onClose={onClose}>
           <ModalOverlay />
@@ -169,7 +170,7 @@ export default function NewHome() {
                   <div id="idalert" className="hide">
                     <Alert status="success">
                     <AlertIcon />
-                      ¡Mensaje enviado
+                      <EmailIcon/> ¡Mensaje enviado!    
                     </Alert> 
                   </div>
                 </Stack>
@@ -215,7 +216,7 @@ export default function NewHome() {
                   <div id="idalert" className="hide">
                     <Alert status="success">
                     <AlertIcon />
-                      ¡Mensaje enviado
+                      <EmailIcon/> ¡Mensaje enviado!   
                     </Alert> 
                   </div>
                 </Stack>
