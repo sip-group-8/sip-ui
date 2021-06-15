@@ -13,6 +13,7 @@ import {
   Image,
   Stack
 } from '@chakra-ui/react';
+import NewsArticle from '../components/newsArticle'
 
 export default function Test() {
   return (
@@ -22,6 +23,7 @@ export default function Test() {
         <meta name="description" content="MVP app" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      
       <VStack spacing="4">
         <Heading as="h3">  
         Volver{' '}
@@ -35,10 +37,12 @@ export default function Test() {
         <Box><ProductSimple/></Box>
         <Box><ProductSimple/></Box>
         <Box><ProductSimple/></Box>
-        <Box><ProductSimple/></Box>
+        <Box><ProductSimple/>
+        </Box>
       </SimpleGrid>
       <StackEx></StackEx>
-      
+      <NewsArticle picture='https://images.unsplash.com/photo-1604413191066-4dd20bedf486?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=920&q=80'  title="Cumpleaños" articleUrl="cumple-pablo"></NewsArticle>
+
     </div>
   )
 }
