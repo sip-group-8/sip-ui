@@ -12,6 +12,7 @@ import {
     ModalBody,
     ModalCloseButton
 } from "@chakra-ui/react"
+import Carousel from "../carousel"
 
 import {
     SimpleGrid,
@@ -75,16 +76,7 @@ export default function HomeHero() {
                         boxShadow={'2xl'}
                         width={'800px'}
                         overflow={'hidden'}>
-                        <Image
-                            alt={'Hero Image'}
-                            fit={'cover'}
-                            align={'center'}
-                            w={'100%'}
-                            h={'100%'}
-                            src={
-                                'https://www.lancetalent.com/blog/wp-content/uploads/SuperMix_04-1.png'
-                            }
-                        />
+                            <Carousel></Carousel>
                     </Box>
                 </Flex>
                 <Stack flex={1} spacing={{ base: 5, md: 10 }}>
