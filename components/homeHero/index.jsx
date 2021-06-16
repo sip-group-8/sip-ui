@@ -60,7 +60,7 @@ export default function HomeHero() {
                         top={'-20%'}
                         left={0}
                         zIndex={-1}
-                        color={useColorModeValue('red.50', 'red.400')}>
+                        color={useColorModeValue('blue.50', 'blue.400')}>
                         <path
                             fillRule="evenodd"
                             clipRule="evenodd"
@@ -102,13 +102,13 @@ export default function HomeHero() {
                                 position: 'absolute',
                                 bottom: 1,
                                 left: 0,
-                                bg: 'red.400',
+                                bg: 'blue.200',
                                 zIndex: -1,
                             }}>
                             Recursos
                         </Text>
                         <br />
-                        <Text as={'span'} color={'red.400'}>
+                        <Text as={'span'} color={'blue.400'}>
                             Humanos
                         </Text>
                     </Heading>
@@ -120,16 +120,6 @@ export default function HomeHero() {
                     <Stack
                         spacing={{ base: 4, sm: 6 }}
                         direction={{ base: 'column', sm: 'row' }}>
-                        <Button
-                            rounded={'full'}
-                            size={'lg'}
-                            fontWeight={'normal'}
-                            px={6}
-                            colorScheme={'red'}
-                            bg={'red.400'}
-                            _hover={{ bg: 'red.500' }}>
-                            Enviar Mensaje
-                        </Button>
                         <CustomModal
                             showModalButtonText="Enviar Mensaje"
                             modalHeader="¿En que podemos ayudarlo?"
@@ -150,9 +140,9 @@ const CustomModal = ({ showModalButtonText, modalHeader, modalBody }) => {
                 size={'lg'}
                 fontWeight={'normal'}
                 px={6}
-                colorScheme={'red'}
-                bg={'red.400'}
-                _hover={{ bg: 'red.500' }} onClick={onOpen}>
+                colorScheme={'blue'}
+                bg={'blue.400'}
+                _hover={{ bg: 'blue.500' }} onClick={onOpen}>
                 {showModalButtonText}
             </Button>
             <Modal isOpen={isOpen} onClose={onClose}>
@@ -178,7 +168,7 @@ const CustomModal = ({ showModalButtonText, modalHeader, modalBody }) => {
                             Cancelar
                         </Button>
                         <Button
-                            colorScheme="red"
+                            colorScheme="blue"
                             onClick={() => {
                                 var element = document.getElementById("idalert");
                                 element.classList.remove("hide");
