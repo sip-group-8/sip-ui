@@ -43,7 +43,7 @@ export default function Profile() {
               <Flex>
                 <Avatar
                   size="2xl"
-                  src="https://images.unsplash.com/photo-1506935077180-46af676a2f6d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80"
+                  name={`${user.nombre} ${user.apellido}}`}
                 ></Avatar>
                 <Box flex="1" pl="32px">
                   <Stack spacing="3">

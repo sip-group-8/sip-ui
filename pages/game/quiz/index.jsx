@@ -3,12 +3,14 @@ import {
   Stack,
   Heading,
   Input,
-  Flex,
+  Container,
   Button,
   Text,
   Progress,
   Grid,
+  Divider,
   Alert,
+  Box,
   AlertIcon,
 } from "@chakra-ui/react";
 
@@ -87,10 +89,28 @@ export default function QuizGame() {
 
   if (!name || !joined) {
     return (
-      <Flex align="center" justifyContent="center">
-        <Stack maxW="440px" spacing="4">
-          <Heading>Quiz Battle game</Heading>
-          <Stack paddingTop="42px" spacing="4">
+      <Container>
+        <Heading textAlign="center">Quiz Battle game</Heading>
+        <Divider my="16px"></Divider>
+        <Grid
+          pt="40px"
+          templateColumns="1fr 1fr"
+          alignItems="flex-start"
+          gridGap="120px"
+        >
+          <Box>
+            <Heading mb="18px">Como jugar?</Heading>
+            <Text>
+              Competí contra otros equipos para ganar puntos y recibir premios
+            </Text>
+            <Text>
+              El juego consta de ser el primero en responder preguntas, tendras
+              5 segundos para seleccionar la correcta, pero apurate! el que
+              primero responde, se lleva los puntos.
+            </Text>
+          </Box>
+          <Stack spacing="12px">
+            <Heading mb="24px">Jugar!</Heading>
             <Text>Ingrese un nombre</Text>
             <Input
               marginTop="30px"
@@ -102,8 +122,8 @@ export default function QuizGame() {
               Unirse al juego
             </Button>
           </Stack>
-        </Stack>
-      </Flex>
+        </Grid>
+      </Container>
     );
   }
 

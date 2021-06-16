@@ -1,19 +1,23 @@
-
-import Head from "next/head"
-import NextLink from "next/link"
+import Head from "next/head";
+import NextLink from "next/link";
+import { useRouter } from "next/router";
 import {
   Box,
   Heading,
-  Container,
+  Grid,
   Text,
   Button,
   Stack,
   Icon,
+  Divider,
   useColorModeValue,
   createIcon,
-} from '@chakra-ui/react';
+} from "@chakra-ui/react";
+import Carousel from "../components/carousel";
+import Noticias from "../components/noticias";
 
 export default function Home() {
+  const router = useRouter();
   return (
     <>
       <Head>
@@ -25,73 +29,82 @@ export default function Home() {
           rel="stylesheet"
         />
       </Head>
-
-      <Container maxW={'3xl'}>
-        <Stack
-          as={Box}
-          textAlign={'center'}
-          spacing={{ base: 8, md: 14 }}
-          py={{ base: 20, md: 36 }}>
-          <Heading
-            fontWeight={600}
-            fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
-            lineHeight={'110%'}>
-            Jugá y divertite <br />
-            <Text as={'span'} color={'primary.400'}>
-              con tu team
-            </Text>
+      <Grid
+        templateColumns="8fr 4fr"
+        alignItems="flex-start"
+        justifyContent="stretch"
+        justifyItems="stretch"
+      >
+        <Carousel></Carousel>
+        <Box p="8">
+          <Heading mb="24px" size="xl">
+            Proximos eventos:
           </Heading>
-          <Text color={'gray.500'}>
-            Refuerza la comunicacion y crea lazos de amistad con tus compañeros de trabajo gracias
-            a las herramientas que tenemos disponibles para vos en <Text display="inline" fontWeight="bold" color="primary.400">SIP Gaming</Text>.
-          </Text>
-          <Stack
-            direction={'column'}
-            spacing={3}
-            align={'center'}
-            alignSelf={'center'}
-            position={'relative'}>
-            <NextLink href="/games">
-              <Button
-                colorScheme={'green'}
-                bg={'primary.400'}
-                rounded={'full'}
-                px={6}
-                _hover={{
-                  bg: 'primary.500',
-                }}>
-                Jugar Ya!
-            </Button>
-            </NextLink>
-            <Box>
-              <Icon
-                as={Arrow}
-                color={useColorModeValue('gray.800', 'gray.300')}
-                w={71}
-                position={'absolute'}
-                right={-71}
-                top={'10px'}
-              />
-              <Text
-                fontSize={'lg'}
-                fontFamily={'Caveat'}
-                position={'absolute'}
-                right={'-170px'}
-                top={'-25px'}
-                transform={'rotate(10deg)'}>
-                Probalo gratis mientras dure la beta!
+          <Grid templateRows="1fr 1fr 1fr 50px" gridGap="18px">
+            <Box
+              border="1px solid grey"
+              borderRadius="8px"
+              p="12px"
+              bg="primary"
+            >
+              <Heading size="md">Sprint Review N` 3</Heading>
+              <Text>
+                Vamos a presentar los nuevos features que tenemos para esta
+                entrega, esperemos que les sean de utilidad.
               </Text>
+              <Text textAlign="right" fontWeight="bold">
+                18 Junio a las 13:00 hs.
+              </Text>
+              <Button variant="link">Ver mas...</Button>
             </Box>
-          </Stack>
-        </Stack>
-      </Container>
+            <Box
+              border="1px solid grey"
+              borderRadius="8px"
+              p="12px"
+              bg="primary"
+            >
+              <Heading size="md">Sprint Review N` 3</Heading>
+              <Text>
+                Vamos a presentar los nuevos features que tenemos para esta
+                entrega, esperemos que les sean de utilidad.
+              </Text>
+              <Text textAlign="right" fontWeight="bold">
+                18 Junio a las 13:00 hs.
+              </Text>
+              <Button variant="link">Ver mas...</Button>
+            </Box>
+            <Box
+              border="1px solid grey"
+              borderRadius="8px"
+              p="12px"
+              bg="primary"
+            >
+              <Heading size="md">Sprint Review N` 3</Heading>
+              <Text>
+                Vamos a presentar los nuevos features que tenemos para esta
+                entrega, esperemos que les sean de utilidad.
+              </Text>
+              <Text textAlign="right" fontWeight="bold">
+                18 Junio a las 13:00 hs.
+              </Text>
+              <Button variant="link">Ver mas...</Button>
+            </Box>
+            <Button onClick={() => router.push("eventos")}>
+              Ver todos los eventos
+            </Button>
+          </Grid>
+        </Box>
+      </Grid>
+      <Divider marginTop="5" />
+
+      <Noticias></Noticias>
     </>
   );
 }
 
 const Arrow = createIcon({
-  displayName: 'Arrow',
-  viewBox: '0 0 72 24',
+  displayName: "Arrow",
+  viewBox: "0 0 72 24",
   path: (
     <path
       fillRule="evenodd"

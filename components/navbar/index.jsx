@@ -13,6 +13,7 @@ import {
   MenuDivider,
   useDisclosure,
   useColorModeValue,
+  Badge,
   Stack,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
@@ -21,12 +22,12 @@ import { useAppContext } from "/context/state";
 import { useRouter } from "next/router";
 
 const Links = [
+  { title: "Inicio", path: "" },
   { title: "Juegos", path: "games" },
   { title: "Estadisticas", path: "scoreboard" },
+  { title: "Cumpleaños", path: "birthday" },
   //   { title: "Equipo", path: "team" },
   { title: "Canje", path: "prizes" },
-  { title: "Login", path: "login" },
-  { title: "Home", path: "home" },
 ];
 
 const NavLink = ({ path, children }) => (
@@ -49,7 +50,8 @@ export default function Simple() {
   const { user } = useAppContext();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const router = useRouter();
-
+  const noRespondio = true;
+  console.log(user);
   return (
     <>
       <Box px={1}>
@@ -60,13 +62,22 @@ export default function Simple() {
             </Box>
             <HStack as={"nav"} spacing={4}>
               {Links.map((link) => {
-                if (user.nombre && link.path == "login") return null;
                 return (
                   <NavLink key={link.path} path={link.path}>
                     {link.title}
                   </NavLink>
                 );
               })}
+              {user.nombre && noRespondio && (
+                <NavLink path="preguntadiaria">
+                  <Button>
+                    Pregunta diaria!
+                    <Badge ml="1" fontSize="0.8em" colorScheme="green">
+                      BETA
+                    </Badge>
+                  </Button>
+                </NavLink>
+              )}
             </HStack>
           </HStack>
           <Flex alignItems={"center"}>
