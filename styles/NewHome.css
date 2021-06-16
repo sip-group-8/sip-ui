@@ -248,10 +248,7 @@
     box-sizing: border-box;
     background-color: #191b05;
 }
-.card img {
-    border-radius: 10px;
-    max-height: 250px;
-}
+
 
 .hide{
     display: none;
@@ -286,6 +283,10 @@
     margin: 25px;
 }
 
+.cont2{
+    padding-left: 30px;
+    padding-right: 30px;
+}
 
 
 

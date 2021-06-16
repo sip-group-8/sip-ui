@@ -28,7 +28,7 @@ const Links = [
   { title: "Login", path: "login" },
   { title: "Home", path: "home" },
   { title: "Beneficios", path: "beneficios" },
-  // { title: "Home2", path: "newhome" },
+  { title: "Home2", path: "newhome" },
 ];
 
 const NavLink = ({ path, children }) => (

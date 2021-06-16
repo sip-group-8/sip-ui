@@ -1,6 +1,9 @@
 import "../styles/globals.css";
 import '../styles/NewHome.css';
 import '../styles/carrousel.css';
+import 'swiper/swiper-bundle.css';
+import '../styles/styles.css';
+
 
 import { ChakraProvider } from "@chakra-ui/react";
 import { AppWrapper } from "/context/state";
