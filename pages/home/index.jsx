@@ -22,6 +22,7 @@ import { Input } from "@chakra-ui/react"
 import { Stack } from "@chakra-ui/react"
 import { Textarea } from "@chakra-ui/react"
 import NewsArticle from '../../components/newsArticle'
+import HomeHero from '../../components/homeHero'
 
 const resumenes = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea reiciendis ut quis, dolores eligendi recusandae facilis debitis quod eum doloremque, sunt labore minus assumenda officiis adipisci aspernatur laudantium numquam non.";
 export default function NewHome() {
@@ -36,12 +37,13 @@ export default function NewHome() {
           <div className="banner1" ><h2 className="logo">NUESTRA EMPRESA</h2></div>
           <div></div>
           <div></div>
-          <div className="banner"><a href="#">Landing</a></div>
-          <div className="banner"><a href="#">Beneficios</a></div>
-          <div className="banner"><a href="#">Busquedas</a></div>
+              {/* <div className="banner"><a href="#">Landing</a></div>
+              <div className="banner"><a href="#">Beneficios</a></div>
+              <div className="banner"><a href="#">Busquedas</a></div> */}
         </div>
       </div>
       {/* Primer Div con el carrousel y el Texto de RRHH */}
+      <HomeHero></HomeHero>
       <div className="f-container2">
         <div className="f__inner2">
           <div className="block1">
