@@ -69,6 +69,7 @@ export default function HomeHero() {
                             fill="currentColor"
                         />
                     </Icon>
+
                     <Box
                         position={'relative'}
                         height={'400px'}

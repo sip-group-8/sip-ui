@@ -12,13 +12,13 @@ import {
 } from "@chakra-ui/react"
 
 
-export default function CreateNewsPage() {
+export default function CreatePrizesPage() {
     
     return (
         <Flex width="full" align="left" justifyContent="left" ml={10} mt={0}>
             <Box p={2}>
                 <Box textAlign="left">
-                    <Heading>Crear noticia</Heading>
+                    <Heading>Crear premio</Heading>
                 </Box>
                 <Box my={4} textAlign="left">
                     <form>
@@ -47,9 +47,20 @@ export default function CreateNewsPage() {
                         </FormControl>
 
                         <FormControl mt={6}>
-                            <FormLabel>Contenido de la noticia</FormLabel>
-                            <Textarea minWidth="600" minHeight="400" />
-                            <FormHelperText>Máximo número de caracteres: 500</FormHelperText>
+                            <FormLabel>Descripción</FormLabel>
+                            <Textarea minWidth="600" minHeight="100" />
+                            <FormHelperText>Máximo número de caracteres: 100</FormHelperText>
+                        </FormControl>
+
+                        <FormControl mt={6}>
+                            <FormLabel>Stock</FormLabel>
+                            <Input type="number" />
+                        </FormControl>
+
+                        <FormControl mt={6}>
+                            <FormLabel>Precio</FormLabel>
+                            <Input type="number" />
+                            <FormHelperText>Números enteros de 100 a 50000</FormHelperText>
                         </FormControl>
 
 
