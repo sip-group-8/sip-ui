@@ -77,6 +77,18 @@ export default function HomeHero() {
                         width={'800px'}
                         overflow={'hidden'}>
                             <Carousel></Carousel>
+                            {/* 
+                        <Image
+                            alt={'Hero Image'}
+                            fit={'cover'}
+                            align={'center'}
+                            w={'100%'}
+                            h={'100%'}
+                            src={
+                                'https://www.lancetalent.com/blog/wp-content/uploads/SuperMix_04-1.png'
+                            }
+                        />
+                        */}
                     </Box>
                 </Flex>
                 <Stack flex={1} spacing={{ base: 5, md: 10 }}>

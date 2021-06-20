@@ -45,58 +45,11 @@ export default function NewHome() {
       {/* Primer Div con el carrousel y el Texto de RRHH */}
       <HomeHero></HomeHero>
       <div className="f-container2">
-        <div className="f__inner2">
-          <div className="block1">
-            <div className="cont">
-              <div className="slider">
-                <div className="slides">
-                  <input type="radio" name="radio-btn" id="radio1" />
-                  <input type="radio" name="radio-btn" id="radio2" />
-                  <div className="slide first">
-                    <img src="https://www.lancetalent.com/blog/wp-content/uploads/SuperMix_04-1.png" alt="" />
-                  </div>
-                  <div className="slide">
-                    <img src="https://www.esan.edu.pe/apuntes-empresariales/2016/06/07/identidad_principal.jpg" alt="" />
-                  </div>
-
-                  <div className="navigation-auto">
-                    <div className="auto-btn1"></div>
-                    <div className="auto-btn2"></div>
-                  </div>
-                </div>
-
-                <div className="navigation-manual">
-                  <label htmlFor="radio1" className="manual-btn"></label>
-                  <label htmlFor="radio2" className="manual-btn"></label>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="block2">
-            <div className="banner-area">
-              <div>
-                <h1>Recursos Humanos</h1>
-                <p>Tenes alguna duda, alguna inquietud, alguna inquietud.
-                  <strong> ¡Contactanos!</strong>
-                </p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea reiciendis ut quis, dolores eligendi recusandae facilis debitis quod eum doloremque, sunt labore minus assumenda officiis adipisci aspernatur laudantium numquam non.</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit enim repudiandae tenetur sequi eos assumenda, adipisci in sapiente corporis cum facilis minima natus laborum numquam? Temporibus ut magni ipsam consequatur.
-
-                </p>
-                {/* <a href={BasicUsage2}>Enviar Mensaje</a> */}
-                {/* <BasicUsage2 size="xl" /> */}
-                {/* <button onClick={BasicUsage2()}>Enviar</button> */}
-                <div className="App">
-                  <CustomModal
-                    showModalButtonText="Enviar Mensaje"
-                    modalHeader="¿En que podemos ayudarlo?"
-                    modalBody="Escriba el cuerpo del mensaje"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        
+             
+           
+         
+     
       </div>
       
       <Flex align="center" justifyContent="center" pb="8">
