@@ -18,7 +18,7 @@ import {
   }) => {
     return (
       <chakra.button
-        bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
+        bg={useColorModeValue( 'whiteAlpha.100', 'blackAlpha.100')}
         rounded={'full'}
         w={8}
         h={8}
@@ -30,7 +30,7 @@ import {
         justifyContent={'center'}
         transition={'background 0.3s ease'}
         _hover={{
-          bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
+          bg: useColorModeValue('whiteAlpha.100', 'blackAlpha.100'),
         }}>
         <VisuallyHidden>{label}</VisuallyHidden>
         {children}
@@ -40,7 +40,7 @@ import {
   
   export default function Footer() {
     return (
-      <Box borderTopWidth="gray.700" borderTopWidth="1px">
+      <Box borderTopWidth="gray.700" borderTopWidth="1px" bgGradient="linear(to-b, #ff4431, #f5231e)">
         <Container
           as={Stack}
           maxW={'6xl'}
@@ -50,16 +50,16 @@ import {
           justify={{ base: 'center', md: 'space-between' }}
           align={{ base: 'center', md: 'center' }}>
           <Logo />
-          <Text>© 2021 Sip Grupo 8.</Text>
+          <Text color="white">© 2021 Sip Grupo 8.</Text>
           <Stack direction={'row'} spacing={6}>
-            <SocialButton label={'Twitter'} href={'#'}>
-              <FaTwitter />
+            <SocialButton  label={'Twitter'} href={'#'}>
+              <FaTwitter color="white" />
             </SocialButton>
             <SocialButton label={'YouTube'} href={'#'}>
-              <FaYoutube />
+              <FaYoutube color="white" />
             </SocialButton>
             <SocialButton label={'Instagram'} href={'#'}>
-              <FaInstagram />
+              <FaInstagram color="white" />
             </SocialButton>
           </Stack>
         </Container>

@@ -31,17 +31,19 @@ export default function NewHome() {
   return (
 
     <div className="">
-      {/* banner de arriba  */}
-      <div className="f-container">
+      {/* banner de arriba 
+            <div className="f-container">
         <div className="f__inner">
           <div className="banner1" ><h2 className="logo">NUESTRA EMPRESA</h2></div>
           <div></div>
           <div></div>
               {/* <div className="banner"><a href="#">Landing</a></div>
               <div className="banner"><a href="#">Beneficios</a></div>
-              <div className="banner"><a href="#">Busquedas</a></div> */}
+              <div className="banner"><a href="#">Busquedas</a></div> 
         </div>
       </div>
+     */}
+
       {/* Primer Div con el carrousel y el Texto de RRHH */}
       <HomeHero></HomeHero>
       <div className="f-container2">

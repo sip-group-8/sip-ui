@@ -61,7 +61,7 @@ export default function HomeHero() {
                         top={'-20%'}
                         left={0}
                         zIndex={-1}
-                        color={useColorModeValue('blue.50', 'blue.400')}>
+                        color={useColorModeValue('red.50', 'red.400')}>
                         <path
                             fillRule="evenodd"
                             clipRule="evenodd"
@@ -107,13 +107,13 @@ export default function HomeHero() {
                                 position: 'absolute',
                                 bottom: 1,
                                 left: 0,
-                                bg: 'blue.200',
+                                bg: 'red.300',
                                 zIndex: -1,
                             }}>
                             Recursos
                         </Text>
                         <br />
-                        <Text as={'span'} color={'blue.400'}>
+                        <Text as={'span'} color={'red.400'}>
                             Humanos
                         </Text>
                     </Heading>
@@ -145,9 +145,9 @@ const CustomModal = ({ showModalButtonText, modalHeader, modalBody }) => {
                 size={'lg'}
                 fontWeight={'normal'}
                 px={6}
-                colorScheme={'blue'}
-                bg={'blue.400'}
-                _hover={{ bg: 'blue.500' }} onClick={onOpen}>
+                colorScheme={'red'}
+                bg={'red.400'}
+                _hover={{ bg: 'red.500' }} onClick={onOpen}>
                 {showModalButtonText}
             </Button>
             <Modal isOpen={isOpen} onClose={onClose}>
@@ -173,7 +173,7 @@ const CustomModal = ({ showModalButtonText, modalHeader, modalBody }) => {
                             Cancelar
                         </Button>
                         <Button
-                            colorScheme="blue"
+                            colorScheme="red"
                             onClick={() => {
                                 var element = document.getElementById("idalert");
                                 element.classList.remove("hide");

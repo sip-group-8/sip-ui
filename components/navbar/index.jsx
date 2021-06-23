@@ -36,10 +36,11 @@ const NavLink = ({ path, children }) => (
     <Link
       px={2}
       py={1}
+      color="white"
       rounded={"md"}
       _hover={{
         textDecoration: "none",
-        bg: useColorModeValue("gray.200", "gray.700"),
+        bg: useColorModeValue("rgba(255,0,0,0.1)", "rgba(255,0,0,0.2)"),
       }}
     >
       {children}
