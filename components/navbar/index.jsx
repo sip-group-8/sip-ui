@@ -19,6 +19,7 @@ import NextLink from "next/link";
 import Logo from "/components/logo";
 import { useAppContext } from "/context/state";
 import { useRouter } from "next/router";
+import ColorModeSwitcher from "/components/colorModeSwitcher"
 
 const Links = [
   { title: "Juegos", path: "games" },
@@ -59,7 +60,7 @@ export default function Simple() {
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <HStack spacing={8} alignItems={"center"}>
             <Box>
-              <Logo />
+              <Logo  />
             </Box>
             <HStack as={"nav"} spacing={4}>
               {Links.map((link) => {
@@ -92,6 +93,7 @@ export default function Simple() {
               </Menu>
             )}
           </Flex>
+          <ColorModeSwitcher></ColorModeSwitcher>
         </Flex>
 
         {isOpen ? (
