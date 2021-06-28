@@ -27,10 +27,7 @@ export default function PreguntaDiaria() {
         idjuego: 2,
         puntos: 50,
       }),
-      headers: {
-        "content-type": "application/json",
-      },
-      mode: "no-cors",
+      headers: new Headers({ "content-type": "application/json" }),
     });
     if (response.status === 200) {
       toast({
@@ -61,13 +58,22 @@ export default function PreguntaDiaria() {
       </Flex>
     );
   }
+
+  const pregunta = {
+    pregunta: "Estas conforme con los beneficios que brinda la empresa?",
+    respuestas: ["Muy Conforme", "Conforme", "Podrian mejorar", "No"],
+  };
   return (
     <Flex align="center" justifyContent="center" paddingTop="48px">
       <Stack>
-        <Heading size="xl">PREGUNTA PA JODA BROO</Heading>
+        <Heading size="xl" mb="24px">
+          {pregunta.pregunta}
+        </Heading>
         <Stack>
-          {[1, 2, 3, 4].map((pregunta) => (
-            <Button onClick={responderPregunta}>TEST {pregunta}</Button>
+          {pregunta.respuestas.map((r, i) => (
+            <Button key={i} onClick={responderPregunta}>
+              {r}
+            </Button>
           ))}
         </Stack>
       </Stack>

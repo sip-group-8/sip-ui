@@ -9,7 +9,12 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 
-export default function blogPostWithImage() {
+export default function blogPostWithImage({
+  title,
+  description,
+  author,
+  fecha,
+}) {
   return (
     <Center py={6}>
       <Box
@@ -44,21 +49,16 @@ export default function blogPostWithImage() {
             fontSize={"sm"}
             letterSpacing={1.1}
           >
-            Blog
+            Novedad
           </Text>
           <Heading
             color={useColorModeValue("gray.700", "white")}
             fontSize={"2xl"}
             fontFamily={"body"}
           >
-            Novedades del Q3
+            {title}
           </Heading>
-          <Text color={"gray.500"}>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum.
-          </Text>
+          <Text color={"gray.500"}>{description}</Text>
         </Stack>
         <Stack mt={6} direction={"row"} spacing={4} align={"center"}>
           <Avatar
@@ -66,8 +66,8 @@ export default function blogPostWithImage() {
             alt={"Author"}
           />
           <Stack direction={"column"} spacing={0} fontSize={"sm"}>
-            <Text fontWeight={600}>Unempleado D`RRHH</Text>
-            <Text color={"gray.500"}>Feb 08, 2021 · 6min read</Text>
+            <Text fontWeight={600}>{author}</Text>
+            <Text color={"gray.500"}>{fecha} · 6min lectura</Text>
           </Stack>
         </Stack>
       </Box>

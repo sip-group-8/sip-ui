@@ -32,24 +32,16 @@ const Component = () => {
 
   const slides = [
     {
-      href: "/login",
-      img: "https://images.pexels.com/photos/2599537/pexels-photo-2599537.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      href: "/games",
+      img: "https://revistadigital.inesem.es/gestion-empresarial/files/2018/08/destacada-1020x679.jpg",
     },
     {
-      href: "/login",
-      img: "https://images.pexels.com/photos/2714581/pexels-photo-2714581.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      href: "/birthday",
+      img: "https://ichef.bbci.co.uk/news/640/cpsprodpb/1462D/production/_104910538_gettyimages-871610664.jpg",
     },
     {
-      href: "/login",
-      img: "https://images.pexels.com/photos/2878019/pexels-photo-2878019.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
-    },
-    {
-      href: "/login",
-      img: "https://images.pexels.com/photos/1142950/pexels-photo-1142950.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    },
-    {
-      href: "/login",
-      img: "https://images.pexels.com/photos/3124111/pexels-photo-3124111.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      href: "/preguntadiaria",
+      img: "https://emprendedoresnews.com/wp-content/uploads/2018/06/A0CG0002140-e1528395408432.jpg",
     },
   ];
 
@@ -77,6 +69,9 @@ const Component = () => {
       bg="primary"
       p={10}
       alignItems="center"
+      maxH="600px"
+      overflow="hidden"
+      borderRadius="12px"
       justifyContent="center"
     >
       <Flex w="full" overflow="hidden" pos="relative">

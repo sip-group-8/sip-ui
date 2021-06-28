@@ -26,7 +26,7 @@ const Links = [
   { title: "Juegos", path: "games" },
   { title: "Estadisticas", path: "scoreboard" },
   { title: "Cumpleaños", path: "birthday" },
-  //   { title: "Equipo", path: "team" },
+  { title: "Beneficios", path: "beneficios" },
   { title: "Canje", path: "prizes" },
 ];
 
@@ -99,6 +99,11 @@ export default function Simple() {
                 </MenuButton>
               </Menu>
             )}
+            {
+              <NavLink path="login">
+                {!user.nombre && <Button>Login</Button>}
+              </NavLink>
+            }
           </Flex>
         </Flex>
 

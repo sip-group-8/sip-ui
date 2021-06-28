@@ -83,20 +83,18 @@ const Noticias = () => {
                 />
               </Link>
             </Box>
-            <BlogTags tags={["Engineering", "Product"]} marginTop="3" />
+            <BlogTags tags={["SIP", "MVP"]} marginTop="3" />
             <Heading fontSize="xl" marginTop="2">
               <Link textDecoration="none" _hover={{ textDecoration: "none" }}>
-                Some blog title
+                Nuevas funcionalidades!
               </Link>
             </Heading>
             <Text as="p" fontSize="md" marginTop="2">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+              Se agregaron nuevas funcionalidades al MVP, no te olvides dar tu
+              opinión para ayudar en seguir mejorando el portal.
             </Text>
             <BlogAuthor
-              name="John Doe"
+              name="Empleado de HR"
               date={new Date("2021-04-06T19:01:27Z")}
             />
           </Box>
@@ -121,17 +119,15 @@ const Noticias = () => {
                 />
               </Link>
             </Box>
-            <BlogTags tags={["Engineering", "Product"]} marginTop="3" />
+            <BlogTags tags={["SIP", "MVP"]} marginTop="3" />
             <Heading fontSize="xl" marginTop="2">
               <Link textDecoration="none" _hover={{ textDecoration: "none" }}>
-                Some blog title
+                Nuevos productos!
               </Link>
             </Heading>
             <Text as="p" fontSize="md" marginTop="2">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+              Hay nuevos productos disponibles, no te olvides visitar la sección
+              de canje
             </Text>
             <BlogAuthor
               name="John Doe"
@@ -158,20 +154,18 @@ const Noticias = () => {
                 />
               </Link>
             </Box>
-            <BlogTags tags={["Engineering", "Product"]} marginTop="3" />
+            <BlogTags tags={["MVP", "Trabajo en equipo"]} marginTop="3" />
             <Heading fontSize="xl" marginTop="2">
               <Link textDecoration="none" _hover={{ textDecoration: "none" }}>
-                Some blog title
+                Reconozcamos a nuestros compañeros
               </Link>
             </Heading>
             <Text as="p" fontSize="md" marginTop="2">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+              Recordá que podés regalar puntos a las demás personas de la
+              compañia como regalo de cumple.
             </Text>
             <BlogAuthor
-              name="John Doe"
+              name="Mauricio Fernandez"
               date={new Date("2021-04-06T19:01:27Z")}
             />
           </Box>

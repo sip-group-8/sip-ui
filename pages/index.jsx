@@ -31,9 +31,10 @@ export default function Home() {
       </Head>
       <Grid
         templateColumns="8fr 4fr"
-        alignItems="flex-start"
-        justifyContent="stretch"
-        justifyItems="stretch"
+        alignItems="center"
+        justifyContent="center"
+        margin="0 auto"
+        maxW={"7xl"}
       >
         <Carousel></Carousel>
         <Box p="8">
@@ -47,13 +48,22 @@ export default function Home() {
               p="12px"
               bg="primary"
             >
-              <Heading size="md">Sprint Review N` 3</Heading>
-              <Text>
-                Vamos a presentar los nuevos features que tenemos para esta
-                entrega, esperemos que les sean de utilidad.
-              </Text>
+              <Heading size="md">Sprint Review 3</Heading>
+              <Text>Se mostrarán avances del desarrollo del MVP</Text>
               <Text textAlign="right" fontWeight="bold">
-                18 Junio a las 13:00 hs.
+                Hoy.
+              </Text>
+            </Box>
+            <Box
+              border="1px solid grey"
+              borderRadius="8px"
+              p="12px"
+              bg="primary"
+            >
+              <Heading size="md">Fin Sprint 4</Heading>
+              <Text>Entrega Final</Text>
+              <Text textAlign="right" fontWeight="bold">
+                30 de Junio a las 18.30hs
               </Text>
               <Button variant="link">Ver mas...</Button>
             </Box>
@@ -63,29 +73,10 @@ export default function Home() {
               p="12px"
               bg="primary"
             >
-              <Heading size="md">Sprint Review N` 3</Heading>
-              <Text>
-                Vamos a presentar los nuevos features que tenemos para esta
-                entrega, esperemos que les sean de utilidad.
-              </Text>
+              <Heading size="md">Presentación Final</Heading>
+              <Text>Arrancan las presentaciones de los MVP</Text>
               <Text textAlign="right" fontWeight="bold">
-                18 Junio a las 13:00 hs.
-              </Text>
-              <Button variant="link">Ver mas...</Button>
-            </Box>
-            <Box
-              border="1px solid grey"
-              borderRadius="8px"
-              p="12px"
-              bg="primary"
-            >
-              <Heading size="md">Sprint Review N` 3</Heading>
-              <Text>
-                Vamos a presentar los nuevos features que tenemos para esta
-                entrega, esperemos que les sean de utilidad.
-              </Text>
-              <Text textAlign="right" fontWeight="bold">
-                18 Junio a las 13:00 hs.
+                07 de Julio a las 18:30{" "}
               </Text>
               <Button variant="link">Ver mas...</Button>
             </Box>
